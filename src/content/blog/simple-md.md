@@ -48,7 +48,7 @@ _斜体示例_
 
 ## 图片
 
-![这是一个示例图片](https://www.saroprock.com/favicon.ico)
+![这是一个示例图片](https://astro.build/assets/press/astro-icon-dark.png)
 
 ## 代码
 
