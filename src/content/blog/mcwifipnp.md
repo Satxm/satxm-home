@@ -48,9 +48,9 @@ td, th {
 
 <div align="center">
 
-![GUI EN-US](https://github.com/Satxm/images/raw/main/en.jpg)
+![GUI EN-US](https://cdn.modrinth.com/data/cached_images/2164ab49281a8e6125ef9df5e064069756507cca.jpeg)
 
-![GUI ZH-CN](https://github.com/Satxm/images/raw/main/zh.jpg)
+![GUI ZH-CN](https://cdn.modrinth.com/data/cached_images/4a15fdeac48b21b07a0850138b5c447c401042b5.jpeg)
 
 </div>
 
