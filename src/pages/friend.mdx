@@ -9,6 +9,7 @@ import Success from "../components/blog/success.astro";
 import Warning from "../components/blog/warning.astro";
 import TimeLine from "../components/page/TimeLine.astro";
 import LinkCard from "../components/page/LinkCard.astro";
+import { SERVER_URL} from "../consts";
 
 <BaseLayout title="友链">
   <BaseCard title="友链">
@@ -22,12 +23,13 @@ import LinkCard from "../components/page/LinkCard.astro";
 
 - 介绍：生活的旅人
 
-- 链接：https://www.satxm.top
+- 链接：{SERVER_URL}
 
-- 头像：https://www.satxm.top/imgs/profile.jpg
+- 头像：{SERVER_URL}/imgs/profile.jpg
 
 ---
-## 朋友卡片
+## 朋友名片
+
     <div class="grid grid-cols-2 gap-4">
       <LinkCard
         title="EveSunMaple"
