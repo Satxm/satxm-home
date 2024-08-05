@@ -2,7 +2,7 @@
 title: "Markdown 简单说明"
 description: "Markdown 简单说明"
 pubDate: "2024/8/2"
-image: /home.jpg
+image: /imgs/home.jpg
 categories:
   - 日常
 tags:

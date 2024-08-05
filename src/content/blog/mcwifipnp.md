@@ -2,7 +2,7 @@
 title: "LAN World Plug-n-Play"
 description: "更高级联机设置"
 pubDate: "2024/8/2 12:00"
-image: "/home.jpg"
+image: "/imgs/home.jpg"
 categories:
   - 技术
 tags:

@@ -2,7 +2,7 @@
 title: "Debian / Ubuntu 一些设置"
 description: "Debian / Ubuntu 一些设置"
 pubDate: "2024/8/2 13:45"
-image: "/home.jpg"
+image: "/imgs/home.jpg"
 categories:
   - 技术
 tags:
@@ -11,13 +11,17 @@ tags:
 
 ## Debian启用ll命令
 
-ll是ls -l 这个命令的别名
+`ll` 是 `ls -l` 这个命令的别名
+
 让Debian支持ll命令的话则需要修改用户目录下面的.bashrc 配置文件
+
 ```bash
 cd ~  #进入当前用户目录
 vim .bashrc  #使用vim 编辑.bashrc配置文件
 ```
+
 找到这样几行
+
 ```vim
 # You may uncomment the following lines if you want `ls' to be colorized:
 # export LS_OPTIONS='--color=auto'
@@ -26,21 +30,26 @@ vim .bashrc  #使用vim 编辑.bashrc配置文件
 # alias ll='ls $LS_OPTIONS -l'
 # alias l='ls $LS_OPTIONS -lA' 
 ```
+
 把相关行前面的#号去掉，如下
+
 ```vim
 # You may uncomment the following lines if you want `ls' to be colorized:
 export LS_OPTIONS='--color=auto'
-# eval "`dircolors`"
+eval "`dircolors`"
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
 ```
+
 然后```wq!```保存退出执行命令重新载入
+
 ```bash
 source ~/.bashrc
 ```
 
 ## 将硬件时钟设置为本地时区
+
 ```bash
 timedatectl set-timezone "Asia/Shanghai" # 设置时区为中国标准时间（CTS）
 timedatectl set-local-rtc 1 # 设置硬件时钟使用本地时区
@@ -67,11 +76,13 @@ fi
 
 printf "Welcome to %s %s (%s %s %s)\n" "$LSBI" "$LSBR" "$(uname -o)" "$(uname -r)" "$(uname -m)"
 ```
+
 输出结果（以 Debian 12 为示例）
 
 ```bash
 Welcome to Debian 12 (GNU/Linux 6.1.0-23-amd64 x86_64)
 ```
+
 自定义内容可修改以下内容，不可运行脚本，仅显示文本
 
 ```bash 
@@ -83,6 +94,7 @@ vim /etc/motd
 ```bash
 vim /etc/default/locale
 ```
+
 ```vim
 # en_US
 LANG="en_US.UTF-8"
@@ -99,16 +111,20 @@ LANGUAGE="zh_CN:zh"
 ```bash
 vim /etc/locale.gen
 ```
+
 添加以下内容或取消以下内容前注释符号
+
 ```vim
 en_US.UTF-8 UTF-8
 zh_CN.GB18030 GB18030
 zh_CN.GBK GBK
 zh_CN.UTF-8 UTF-8
 ``` 
+
 之后运行 ```locale-gen``` 重新生成语言
 
 修改 ```.bashrc``` 或 ```/etc/bash.bashrc``` 添加以下内容，以便SSH连接后切换中文
+
 ```vim 
 # Change Language to zh-CN when SSH connected:
 if [[ -n $SSH_CONNECTION ]] ; then
@@ -118,10 +134,13 @@ fi
 ```
 
 ## 配置SSH配置文件
+
 修改 ```/etc/ssh/sshd_config``` 文件，添加
+
 ```bash
 sudo vim /etc/ssh/sshd_config
 ```
+
 ```vim
 PermitRootLogin yes # 允许 root 登录
 PasswordAuthentication yes # 允许密码登录
@@ -131,6 +150,7 @@ PubkeyAuthentication yes # 允许证书登录
 ## 编辑 sudoers 文件限制 sudo 权限
 
 我们需要编辑 sudoers 文件。
+
 ```bash
 sudo visudo
 ```
@@ -143,9 +163,11 @@ sudo visudo
 root    ALL=(ALL:ALL) ALL
 username    ALL=(ALL:ALL) ALL
 ```
+
 **或**在编辑器中向下滚动，直到您看到```Allow members of group sudo to execute any command```部分。
 
 在该部分下方添加这些行。
+
 ```vim
 # Allow members of group sudo to execute any command
 %sudo	ALL=(ALL:ALL) ALL

@@ -9,7 +9,7 @@ export const DATE_FORMAT = "YYYY-MM-DD";
 
 // User profile information
 export const USER_NAME = "Satxm";
-export const USER_AVATAR = "/profile.jpg";
+export const USER_AVATAR = "/imgs/profile.jpg";
 
 // Server and transition settings
 export const SERVER_URL = "https://www.satxm.top";
@@ -113,8 +113,9 @@ export const socialIcons = [
     svg: "rss",
   },
 ];
+
 // Category Information
 export const categoriesInfo = [
-  { id: "技术", title: "技术", desc: "技术文章", target: "_self" },
-  { id: "日常", title: "日常", desc: "日常随笔", target: "_self" },
+  { title: "技术", desc: "技术文章", target: "_self" },
+  { title: "日常", desc: "日常随笔", target: "_self" },
 ];

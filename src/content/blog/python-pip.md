@@ -2,7 +2,7 @@
 title: "Python pip 使用国内源"
 description: "Python pip 使用国内源"
 pubDate: "2024/8/2 13:48"
-image: "/home.jpg"
+image: "/imgs/home.jpg"
 categories:
   - 技术
 tags:
@@ -15,14 +15,7 @@ tags:
 
 阿里云：http://mirrors.aliyun.com/pypi/simple/
 
-中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
-
-华中理工大学：http://pypi.hustunique.com/
-
-山东理工大学：http://pypi.sdutlinux.org/
-
-豆瓣：http://pypi.douban.com/simple/
-
+北京外国语大学开源软件镜像站：https://mirrors.bfsu.edu.cn/pypi/web/simple
 
 ## 临时使用
 可以在使用pip的时候加参数```-i https://pypi.tuna.tsinghua.edu.cn/simple```

@@ -2,7 +2,7 @@
 title: "Markdown 样式引导"
 description: "以下是在Astro中编写Markdown内容时可以使用的一些基本Markdown语法示例。"
 pubDate: "2024/8/2 9:00"
-image: "/home.jpg"
+image: "/imgs/home.jpg"
 categories:
   - 技术
 tags:

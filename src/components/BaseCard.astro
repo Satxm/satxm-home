@@ -2,7 +2,7 @@
 import dayjs from "dayjs";
 import { Image } from "astro:assets";
 import License from "../components/License.astro";
-import CommentWaline from "./CommentWaline.astro";
+import Comment from "./Comment.astro";
 import { DATE_FORMAT, infoTest } from "../consts";
 import type { CardInfo } from "../types";
 const {
@@ -27,6 +27,7 @@ const hasTags = tags && tags.length > 0;
   {
     image && (
       <Image
+        id="images"
         src={image}
         width="1920"
         height="1080"
@@ -97,7 +98,7 @@ const hasTags = tags && tags.length > 0;
       isBlog && (
         <>
           <License title={title} url={url} />
-          <CommentWaline />
+          <Comment />
         </>
       )
     }
