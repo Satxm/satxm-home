@@ -101,10 +101,22 @@ export const socialIcons = [
     svg: "github",
   },
   {
+    href: "https://gitee.com/satxm",
+    ariaLabel: "Gitee",
+    title: "Gitee",
+    svg: "gitee",
+  },
+  {
     href: "https://space.bilibili.com/350697357",
     ariaLabel: "BiliBili",
     title: "BiliBili",
     svg: "bilibili",
+  },
+  {
+    href: "https://modrinth.com/user/satxm",
+    ariaLabel: "Modrinth",
+    title: "Modrinth",
+    svg: "modrinth",
   },
   {
     href: "/rss.xml",
