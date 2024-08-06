@@ -6,7 +6,8 @@ image: /imgs/home.jpg
 categories:
   - 日常
 tags:
-  - tag
+  - Markdown
+  - Guide
 ---
 # 一级标题
 

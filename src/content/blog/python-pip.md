@@ -6,7 +6,8 @@ image: "/imgs/home.jpg"
 categories:
   - 技术
 tags:
-  - Makrdown
+  - Python
+  - pip
 ---
 
 ## 常用国内源：

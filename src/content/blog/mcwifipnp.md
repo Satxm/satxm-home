@@ -6,7 +6,9 @@ image: "/imgs/home.jpg"
 categories:
   - 技术
 tags:
-  - Makrdown
+  - mcwifipnp
+  - Minecraft
+  - MC-Mods
 ---
 
 <style>

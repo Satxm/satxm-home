@@ -6,7 +6,8 @@ image: "/imgs/home.jpg"
 categories:
   - 技术
 tags:
-  - Makrdown
+  - Debian
+  - Ubuntu
 ---
 
 ## Debian启用ll命令
@@ -245,4 +246,29 @@ fi
 ```bash
 source /etc/bash.bashrc
 source .bashrc
+```
+## Ubuntu卸载旧内核
+
+Ubuntu查看已安装内核
+
+```bash
+dpkg --get-selections | grep linux 
+```
+
+Ubuntu卸载旧内核
+
+```bash
+sudo apt-get remove 需要卸载的内核
+```
+
+Ubuntu卸载旧内核配置文件
+
+```bash
+sudo apt-get purge 需要卸载的内核 
+```
+
+更新系统引导
+
+```bash
+sudo update-grub 
 ```
