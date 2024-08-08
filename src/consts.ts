@@ -4,7 +4,7 @@
 // Site title and description
 export const SITE_TAB = "Satxm";
 export const SITE_TITLE = "Satxm";
-export const SITE_DESCRIPTION = "Satxm's Blogs";
+export const SITE_DESCRIPTION = "Satxm's Home";
 export const DATE_FORMAT = "YYYY-MM-DD";
 
 // User profile information
