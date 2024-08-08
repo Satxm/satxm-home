@@ -1,7 +1,7 @@
 {
   "name": "satxm-pages",
   "type": "module",
-  "version": "2.5.0",
+  "version": "2.5.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -16,8 +16,10 @@
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^7.7.2",
     "@playform/compress": "^0.0.13",
-    "astro": "^4.13.0",
+    "@vercel/analytics": "^1.3.1",
+    "astro": "^4.13.1",
     "astro-icon": "^1.1.0",
     "astro-pagefind": "^1.6.0",
     "dayjs": "^1.11.12",
@@ -29,10 +31,11 @@
     "remark-math": "^6.0.0",
     "sass": "^1.77.8",
     "shiki": "^1.12.1",
-    "twikoo": "^1.6.38",
+    "twikoo": "^1.6.39",
     "typescript": "^5.5.3"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
     "daisyui": "^4.12.10",
     "tailwindcss": "^3.4.7"
   }

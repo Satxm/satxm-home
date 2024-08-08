@@ -15,12 +15,20 @@ export const USER_AVATAR = "/imgs/profile.jpg";
 export const SERVER_URL = "https://www.satxm.top";
 export const TRANSITION_API = true;
 
+// Site theme
+export const siteTheme = {
+  light: "winter",
+  dark: "dracula",
+};
+
 // Some informative text on the site
 export const infoTest = {
   tag: "标签：",
   noTag: "None",
+  tagCard: "标签",
   tagPage: "标签 - ",
   noCategory: "None",
+  categoryCard: "分类",
   categoriesPage: "分类",
   categoryPage: "分类 - ",
   link: "链接：",
@@ -60,13 +68,6 @@ export const menuItems = [
         svg: "heart",
         target: "_self",
       }, // Life category
-      {
-        id: "categories",
-        text: "所有类别",
-        href: "/blog/categories",
-        svg: "categories",
-        target: "_self",
-      }, // All categories
     ],
   }, // Blog page with sub-items
   {
