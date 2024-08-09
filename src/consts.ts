@@ -38,59 +38,42 @@ export const infoTest = {
 
 // Menu items for navigation
 export const menuItems = [
-  { id: "home", text: "主页", href: "/", svg: "home", target: "_self" }, // Home page
-  { id: "about", text: "关于", href: "/about", svg: "about", target: "_self" }, // About page
+  { id: "主页", text: "主页", href: "/", svg: "home", target: "_self" },
   {
-    id: "blog",
+    id: "文章",
     text: "文章",
     href: "/blog",
     svg: "blog",
     target: "_self",
     subItems: [
       {
-        id: "all",
+        id: "文章",
         text: "所有文章",
         href: "/blog",
         svg: "post",
         target: "_self",
-      }, // All blog
+      },
       {
-        id: "tech",
+        id: "技术",
         text: "技术文章",
         href: "/blog/categories/技术",
         svg: "cube",
         target: "_self",
-      }, // Technology category
+      },
       {
-        id: "life",
+        id: "日常",
         text: "日常随笔",
         href: "/blog/categories/日常",
         svg: "heart",
         target: "_self",
-      }, // Life category
+      },
     ],
-  }, // Blog page with sub-items
-  {
-    id: "project",
-    text: "项目",
-    href: "/project",
-    svg: "project",
-    target: "_self",
-  }, // Projects page
-  {
-    id: "friend",
-    text: "友链",
-    href: "/friend",
-    svg: "friend",
-    target: "_self",
-  }, // Friends page
-  {
-    id: "contact",
-    text: "联系我",
-    href: "mailto:Satxm@outlook.com", // Contact email
-    target: "_blank", // Open in a new tab
-    svg: "contact",
   },
+  { id: "项目", text: "项目", href: "/project", svg: "project", target: "_self", },
+  { id: "友链", text: "友链", href: "/friend", svg: "friend", target: "_self",},
+  { id: "关于", text: "关于", href: "/about", svg: "about", target: "_self" },
+  { id: "联系我", text: "联系我", href: "mailto:Satxm@outlook.com", target: "_blank", svg: "contact", },
+  { id: "RSS", text: "RSS", href: "/rss.xml", target: "_blank", svg: "bookmark",},
 ];
 
 // Social media and contact icons
@@ -120,10 +103,10 @@ export const socialIcons = [
     svg: "modrinth",
   },
   {
-    href: "/rss.xml",
-    ariaLabel: "RSS Feed",
-    title: "RSS Feed",
-    svg: "rss",
+    href: "https://steamcommunity.com/id/sat911/",
+    ariaLabel: "Steam",
+    title: "Steam",
+    svg: "steam",
   },
 ];
 
