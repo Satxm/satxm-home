@@ -1,5 +1,5 @@
-document.addEventListener("astro:page-load", function () {
-var imgUrls = [
+document.addEventListener("astro:page-load", () => {
+  var imgUrls = [
     "0bd6e01c39bf87059dfdc9eb5417e2e2.jpg",
     "0e03eeb3971d3f7688e05fab49819cce.jpg",
     "1c59c5172ce9addb8462efc07f08e231.jpg",
@@ -79,17 +79,18 @@ var imgUrls = [
     "ef68b51a8aab0cc134122c85ac140f92.jpg",
     "f080602a7f8220b5d8cf52d37d260bab.jpg",
     "fe8e504680ffb218427f4e5709983ae5.jpg"
-];
-var index = Math.round( Math.random() * 78 );
-var imgUrl = imgUrls[index];
-var url = "/imgs/" + imgUrl;
-document.getElementById('images').src=url;
-var images = document.getElementsByClassName("object-cover");
-for (var i=0;i<images.length;i++) {
-	var index = Math.round( Math.random() * 79 );
-	var imgUrl = imgUrls[index];
-	var url = "/imgs/" + imgUrl;
-	images[i].src=url;
-}
+  ];
+  var index = Math.round(Math.random() * 78);
+  var imgUrl = imgUrls[index];
+  var url = "/imgs/" + imgUrl;
+  console.log(document.getElementById('images').src);
+  document.getElementById('images').src = url;
+  var images = document.getElementsByClassName("object-cover");
+  for (var i = 0; i < images.length; i++) {
+    var index = Math.round(Math.random() * 79);
+    var imgUrl = imgUrls[index];
+    var url = "/imgs/" + imgUrl;
+    images[i].src = url;
+  }
 });
 

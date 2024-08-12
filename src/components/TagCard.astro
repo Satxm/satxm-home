@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { infoTest } from "../consts";
+import { infoText } from "../consts";
 
 interface TagCount {
   tag: string;
@@ -27,7 +27,7 @@ const tagsWithCounts = await getTagsWithCounts();
 <div class="bg-base-100 shadow-xl w-full mb-8 no-card">
   <div class="p-4">
     <div class="btn btn-sm btn-ghost no-animation w-full font-bold">
-      {infoTest.tagCard}
+      {infoText.tagCard}
     </div>
   </div>
   <div class="flex flex-wrap gap-2.5 w-full p-4 max-h-[300px] overflow-auto">

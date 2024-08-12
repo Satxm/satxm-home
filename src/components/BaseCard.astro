@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 import { Image } from "astro:assets";
 import License from "../components/License.astro";
 import Comment from "./Comment.astro";
-import { DATE_FORMAT, infoTest } from "../consts";
+import { DATE_FORMAT, infoText } from "../consts";
 import type { CardInfo } from "../types";
 const {
   title = "undefined",
@@ -66,7 +66,7 @@ const hasTags = tags && tags.length > 0;
                 ))
               ) : (
                 <div class="btn btn-xs btn-secondary btn-disabled rounded-full">
-                  {infoTest.noCategory}
+                  {infoText.noCategory}
                 </div>
               )}
               {hasTags ? (
@@ -83,7 +83,7 @@ const hasTags = tags && tags.length > 0;
                 ))
               ) : (
                 <div class="btn btn-xs btn-secondary btn-disabled">
-                  {infoTest.noTag}
+                  {infoText.noTag}
                 </div>
               )}
             </div>

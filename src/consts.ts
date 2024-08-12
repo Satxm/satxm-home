@@ -15,14 +15,8 @@ export const USER_AVATAR = "/imgs/profile.jpg";
 export const SERVER_URL = "https://www.satxm.top";
 export const TRANSITION_API = true;
 
-// Site theme
-export const siteTheme = {
-  light: "winter",
-  dark: "dracula",
-};
-
 // Some informative text on the site
-export const infoTest = {
+export const infoText = {
   tag: "标签：",
   noTag: "None",
   tagCard: "标签",

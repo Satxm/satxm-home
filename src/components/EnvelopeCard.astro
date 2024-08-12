@@ -1,7 +1,7 @@
 ---
 import dayjs from "dayjs";
 import { Image } from "astro:assets";
-import { infoTest } from "../consts";
+import { infoText } from "../consts";
 import type { EnvelopeInfo } from "../types";
 import { DATE_FORMAT } from "../consts";
 const { title, desc, image, pubDate, badge, categories, tags, url } =
@@ -45,7 +45,7 @@ const target = "_self";
               ))
             ) : (
               <div class="btn btn-xs btn-secondary btn-disabled rounded-full">
-                {infoTest.noCategory}
+                {infoText.noCategory}
               </div>
             )
           }
@@ -61,7 +61,7 @@ const target = "_self";
               ))
             ) : (
               <div class="btn btn-xs btn-secondary btn-disabled">
-                {infoTest.noTag}
+                {infoText.noTag}
               </div>
             )
           }
