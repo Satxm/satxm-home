@@ -4,7 +4,7 @@ import EnvelopeCard from "../../components/EnvelopeCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BaseCard from "../../components/BaseCard.astro";
 import { getCollection } from "astro:content";
-import Search from "../../components/Search.astro";
+import Search from "astro-pagefind/components/Search";
 import { infoText } from "../../consts";
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
@@ -43,15 +43,15 @@ const totalPages = Math.ceil(page.total / page.size);
 const pageLinks = generatePageLinks(totalPages);
 ---
 
-<BaseLayout title="Blog">
-  <BaseCard title="search">
+<BaseLayout title="文章">
+  <BaseCard title="搜索">
     <Search
       id="search"
       className="pagefind-ui"
       uiOptions={{ showImages: false }}
     />
   </BaseCard>
-  <div class="mt-8 mb-8">
+  <div class="mt-8 mb-8" data-pagefind-ignore>
     {
       page.data.map((post: Post) => (
         <EnvelopeCard

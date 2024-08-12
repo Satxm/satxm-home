@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-import pagefind from './src/pagefind.ts';
+import pagefind from 'astro-pagefind';
 import playformCompress from "@playform/compress";
 import icon from "astro-icon";
 import swup from '@swup/astro';

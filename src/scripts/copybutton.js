@@ -37,7 +37,6 @@ function addCopyButton() {
   });
 };
 
-
 document.addEventListener("DOMContentLoaded", addCopyButton);
 
 document.addEventListener("swup:page:view", addCopyButton);

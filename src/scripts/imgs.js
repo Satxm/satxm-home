@@ -89,7 +89,7 @@ function randomimg () {
   var url = "/imgs/" + imgUrl;
   document.getElementById('images').src = url;
   var images = document.getElementsByClassName("object-cover");
-  for (var i = 1; i < images.length; i++) {
+  for (var i = 0; i < images.length; i++) {
     var index = Math.round(Math.random() * 78);
     var imgUrl = imgUrls[index];
     var url = "/imgs/" + imgUrl;

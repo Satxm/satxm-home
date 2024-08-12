@@ -3,10 +3,6 @@
 ---
 
 <script>
-  document.addEventListener("DOMContentLoaded", updateRepoInfo);
-
-  document.addEventListener("swup:page:view", updateRepoInfo);
-  
   function updateRepoInfo() {
     function getRepoInfoFromUrl(repoUrl: string) {
       const urlParts = repoUrl.split("/");
@@ -47,4 +43,8 @@
       }
     });
   };
+
+  document.addEventListener("DOMContentLoaded", updateRepoInfo);
+
+  document.addEventListener("swup:page:view", updateRepoInfo);
 </script>

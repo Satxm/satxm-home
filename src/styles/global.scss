@@ -66,11 +66,10 @@ body {
 }
 
 @font-face {
-  font-family: 'Cascadia';
-  src: url('/fonts/CascadiaCode.woff2') format('woff2');
-  font-weight: 700;
+  font-family: "Engravers' Old English BT";
   font-style: normal;
   font-display: swap;
+  src: url("/fonts/EngraversOldEnglishBT.woff2") format("woff2"), url("/fonts/EngraversOldEnglishBT.ttf") format("truetype");
 }
 
 ol {
@@ -143,12 +142,12 @@ table tr {
 }
 
 code {
-  font-family: 'Cascadia';
+  font-family: 'Inconsolata';
   @apply text-xl p-[2px_5px] rounded-sm;
 }
 
 pre {
-  font-family: 'Cascadia';
+  font-family: 'Inconsolata';
   padding: 10px;
 }
 
@@ -217,7 +216,7 @@ thead th {
 }
 
 .highlight .code-lang {
-  font-family: 'Cascadia';
+  font-family: 'Inconsolata';
   user-select: none;
 }
 

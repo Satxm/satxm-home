@@ -56,12 +56,12 @@ const totalPages = Math.ceil(page.total / page.size);
 const pageLinks = generatePageLinks(totalPages);
 ---
 
-<BaseLayout title="Tag">
-  <BaseCard title="Tag">
+<BaseLayout title="标签">
+  <BaseCard title="标签">
     <h1 id="h1">{infoText.tagPage + params.tag}</h1>
     <hr />
   </BaseCard>
-  <div class="mt-8 mb-8">
+  <div class="mt-8 mb-8" data-pagefind-ignore>
     {
       page.data.map((post: Post) => (
         <EnvelopeCard
