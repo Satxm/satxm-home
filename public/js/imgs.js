@@ -1,4 +1,8 @@
-document.addEventListener("astro:page-load", () => {
+document.addEventListener("DOMContentLoaded", randomimg);
+
+document.addEventListener("swup:page:view", randomimg);
+
+function randomimg () {
   var imgUrls = [
     "0bd6e01c39bf87059dfdc9eb5417e2e2.jpg",
     "0e03eeb3971d3f7688e05fab49819cce.jpg",
@@ -83,14 +87,13 @@ document.addEventListener("astro:page-load", () => {
   var index = Math.round(Math.random() * 78);
   var imgUrl = imgUrls[index];
   var url = "/imgs/" + imgUrl;
-  console.log(document.getElementById('images').src);
   document.getElementById('images').src = url;
   var images = document.getElementsByClassName("object-cover");
-  for (var i = 0; i < images.length; i++) {
-    var index = Math.round(Math.random() * 79);
+  for (var i = 1; i < images.length; i++) {
+    var index = Math.round(Math.random() * 78);
     var imgUrl = imgUrls[index];
     var url = "/imgs/" + imgUrl;
     images[i].src = url;
   }
-});
+};
 

@@ -3,7 +3,11 @@
 ---
 
 <script>
-  document.addEventListener("astro:page-load", () => {
+  document.addEventListener("DOMContentLoaded", updateRepoInfo);
+
+  document.addEventListener("swup:page:view", updateRepoInfo);
+  
+  function updateRepoInfo() {
     function getRepoInfoFromUrl(repoUrl: string) {
       const urlParts = repoUrl.split("/");
       const owner = urlParts[urlParts.length - 2];
@@ -42,5 +46,5 @@
         }
       }
     });
-  });
+  };
 </script>

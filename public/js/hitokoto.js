@@ -1,4 +1,8 @@
-document.addEventListener("astro:page-load", () => {
+document.addEventListener("DOMContentLoaded", hitokoto);
+
+document.addEventListener("swup:page:view", hitokoto);
+
+function hitokoto() {
   // 获取一言数据
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
@@ -19,7 +23,7 @@ document.addEventListener("astro:page-load", () => {
   avatarElement.addEventListener('load', function () {
     avatarElement.classList.add("show");
   });
-});
+};
 
 var iUp = (function () {
   var time = 0,
