@@ -1,8 +1,4 @@
-document.addEventListener("DOMContentLoaded", randomimg);
-
-document.addEventListener("swup:page:view", randomimg);
-
-function randomimg () {
+document.addEventListener("astro:page-load", () => {
   var imgUrls = [
     "0bd6e01c39bf87059dfdc9eb5417e2e2.jpg",
     "0e03eeb3971d3f7688e05fab49819cce.jpg",
@@ -84,16 +80,11 @@ function randomimg () {
     "f080602a7f8220b5d8cf52d37d260bab.jpg",
     "fe8e504680ffb218427f4e5709983ae5.jpg"
   ];
-  var index = Math.round(Math.random() * 78);
-  var imgUrl = imgUrls[index];
-  var url = "/imgs/" + imgUrl;
-  document.getElementById('images').src = url;
-  var images = document.getElementsByClassName("object-cover");
-  for (var i = 0; i < images.length; i++) {
-    var index = Math.round(Math.random() * 78);
+  var images = document.querySelectorAll("#images");
+  images.forEach(function (element) {
+    var index = Math.round(Math.random() * (imgUrls.length - 1));
     var imgUrl = imgUrls[index];
     var url = "/imgs/" + imgUrl;
-    images[i].src = url;
-  }
-};
-
+    element.src = url;
+  });
+});

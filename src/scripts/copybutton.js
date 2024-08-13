@@ -1,4 +1,4 @@
-function addCopyButton() {
+document.addEventListener("astro:page-load", () => {
   var codeBlocks = document.querySelectorAll('.code');
   var toolsBlocks = document.querySelectorAll('.highlight-tools');
 
@@ -35,8 +35,4 @@ function addCopyButton() {
       });
     });
   });
-};
-
-document.addEventListener("DOMContentLoaded", addCopyButton);
-
-document.addEventListener("swup:page:view", addCopyButton);
+});
