@@ -1,32 +1,19 @@
 ---
-import type { Post, Page } from "../../../../types";
-import EnvelopeCard from "../../../../components/EnvelopeCard.astro";
-import BaseLayout from "../../../../layouts/BaseLayout.astro";
-import BaseCard from "../../../../components/BaseCard.astro";
+import type { Post, Page } from "../../types";
+import EnvelopeCard from "../../components/EnvelopeCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseCard from "../../components/BaseCard.astro";
 import { getCollection } from "astro:content";
-import { infoText } from "../../../../consts";
+import Search from "astro-pagefind/components/Search";
+import { infoText } from "../../consts";
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
-  const all_posts = await getCollection("blog");
-
-  const all_tags = [
-    ...new Set(all_posts.flatMap((post) => post.data.tags || [])),
-  ];
-
-  all_posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-  return all_tags.flatMap((tag) => {
-    const filtered_posts = all_posts.filter((post) =>
-      post.data.tags?.includes(tag)
-    );
-    return paginate(filtered_posts, {
-      params: { tag },
-      pageSize: 8,
-    });
-  });
+  const posts = await getCollection("blog");
+  posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  return paginate(posts, { pageSize: 8 });
 }
 
-const { page } = Astro.props as { page: Page };
-const params = Astro.params;
+const { page }: { page: Page } = Astro.props;
 
 function generatePageLinks(totalPages: number): {
   active: string[];
@@ -56,10 +43,13 @@ const totalPages = Math.ceil(page.total / page.size);
 const pageLinks = generatePageLinks(totalPages);
 ---
 
-<BaseLayout title="标签">
-  <BaseCard title="标签">
-    <h1 id="h1">{infoText.tagPage + params.tag}</h1>
-    <hr />
+<BaseLayout title="文章">
+  <BaseCard title="搜索">
+    <Search
+      id="search"
+      className="pagefind-ui"
+      uiOptions={{ showImages: false }}
+    />
   </BaseCard>
   <div class="mt-8 mb-8" data-pagefind-ignore>
     {
@@ -68,7 +58,7 @@ const pageLinks = generatePageLinks(totalPages);
           title={post.data.title}
           image={post.data.image}
           desc={post.data.description}
-          url={"/blog/" + post.slug}
+          url={"/posts/" + post.slug}
           pubDate={post.data.pubDate}
           badge={post.data.badge}
           categories={post.data.categories}
@@ -80,10 +70,10 @@ const pageLinks = generatePageLinks(totalPages);
   </div>
   <div class="flex justify-between mb-8">
     <a
-      href={page.url.prev || "'#'"}
+      href={page.url.prev ? page.url.prev : `javascript:`}
       class={page.url.prev
         ? `btn bg-base-100 shadow-xl`
-        : `btn btn-disabled bg-base-100 shadow-xl`}
+        : `btn  btn-disabled bg-base-100 shadow-xl`}
     >
       <svg
         class="h-6 w-6 fill-current md:h-8 md:w-8"
@@ -95,7 +85,7 @@ const pageLinks = generatePageLinks(totalPages);
         <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"
         ></path>
       </svg>
-      <span class="hidden lg:inline"> {infoText.prevPage}</span>
+      <span class="hidden lg:inline ml-2">{infoText.prevPage}</span>
     </a>
     <div class="join">
       {
@@ -117,11 +107,7 @@ const pageLinks = generatePageLinks(totalPages);
                         <a
                           title={hidden}
                           aria-label={hidden}
-                          href={
-                            hidden === "1"
-                              ? `/blog/tag/${params.tag}`
-                              : `/blog/tag/${params.tag}/${hidden}`
-                          }
+                          href={hidden === "1" ? `/posts` : `/posts/${hidden}`}
                           class={`menu-item bg-base-100 ${hidden === page.current ? "btn-active" : ""}`}
                         >
                           {hidden}
@@ -134,11 +120,7 @@ const pageLinks = generatePageLinks(totalPages);
                 <a
                   title={link}
                   aria-label={link}
-                  href={
-                    link === "1"
-                      ? `/blog/tag/${params.tag}`
-                      : `/blog/tag/${params.tag}/${link}`
-                  }
+                  href={link === "1" ? `/posts` : `/posts/${link}`}
                   class={`join-item btn bg-base-100 ${link === page.current ? "btn-active" : ""}`}
                 >
                   {link}
@@ -151,11 +133,7 @@ const pageLinks = generatePageLinks(totalPages);
             <a
               title={link}
               aria-label={link}
-              href={
-                link === "1"
-                  ? `/blog/tag/${params.tag}`
-                  : `/blog/tag/${params.tag}/${link}`
-              }
+              href={link === "1" ? `/posts` : `/posts/${link}`}
               class={`join-item btn bg-base-100 ${link === page.current ? "btn-active" : ""}`}
             >
               {link}
@@ -165,12 +143,12 @@ const pageLinks = generatePageLinks(totalPages);
       }
     </div>
     <a
-      href={page.url.next || "'#'"}
+      href={page.url.next ? page.url.next : `javascript:`}
       class={page.url.next
         ? `btn bg-base-100 shadow-xl`
-        : `btn btn-disabled bg-base-100 shadow-xl`}
+        : `btn  btn-disabled bg-base-100 shadow-xl`}
     >
-      <span class="hidden lg:inline"> {infoText.nextPage}</span>
+      <span class="hidden lg:inline ml-2">{infoText.nextPage}</span>
       <svg
         class="h-6 w-6 fill-current md:h-8 md:w-8"
         xmlns="http://www.w3.org/2000/svg"

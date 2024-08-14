@@ -36,28 +36,28 @@ export const menuItems = [
   {
     id: "文章",
     text: "文章",
-    href: "/blog",
+    href: "/posts",
     svg: "blog",
     target: "_self",
     subItems: [
       {
         id: "文章",
         text: "所有文章",
-        href: "/blog",
+        href: "/posts",
         svg: "post",
         target: "_self",
       },
       {
         id: "技术",
         text: "技术文章",
-        href: "/blog/categories/技术",
+        href: "/categories/技术",
         svg: "cube",
         target: "_self",
       },
       {
         id: "日常",
         text: "日常随笔",
-        href: "/blog/categories/日常",
+        href: "/categories/日常",
         svg: "heart",
         target: "_self",
       },
@@ -66,7 +66,7 @@ export const menuItems = [
   { id: "项目", text: "项目", href: "/project", svg: "project", target: "_self", },
   { id: "友链", text: "友链", href: "/friend", svg: "friend", target: "_self",},
   { id: "关于", text: "关于", href: "/about", svg: "about", target: "_self" },
-  { id: "联系我", text: "联系我", href: "mailto:Satxm@outlook.com", target: "_blank", svg: "contact", },
+  { id: "留言", text: "留言", href: "https://github.com/Satxm/satxm-home/issues", target: "_blank", svg: "contact", },
   { id: "RSS", text: "RSS", href: "/rss.xml", target: "_blank", svg: "bookmark",},
 ];
 
