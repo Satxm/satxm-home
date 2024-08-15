@@ -1,8 +1,5 @@
 ---
-import { 
-  USER_NAME,
-  SERVER_URL
-} from "../consts";
+import { USER_NAME, SERVER_URL } from "../consts";
 ---
 
 <footer data-pagefind-ignore
@@ -26,13 +23,11 @@ import {
       © {new Date().getFullYear()} <a href={SERVER_URL} target="_blank" class="font-bold">{USER_NAME}</a> 版权所有
     </p>
   </aside>
-  <nav>
+  <aside class="grid-flow-col items-center" style="margin-left: auto;">
     <p>
-      由 <a href="https://astro.build/" target="_blank" class="font-bold">Astro</a> &
-      <a href="https://hitokoto.cn/" target="_blank" class="font-bold">Hitokoto</a> 驱动。
-      在 <a href="https://github.com/" target="_blank" class="font-bold">GitHub</a> &
-      <a href="https://cloudflare.com/" target="_blank" class="font-bold">Cloudflare</a> 建设。
-      ⚡ 使用<a href="https://github.com/EveSunMaple/Frosti" target="_blank" class="font-bold">Frosti</a>主题。
+      🧊 由 <a href="https://astro.build/" target="_blank" class="font-bold">Astro</a> &
+      <a href="https://hitokoto.cn/" target="_blank" class="font-bold">Hitokoto</a> 强力驱动
+      ⚡ 使用 <a href="https://github.com/EveSunMaple/Frosti" target="_blank" class="font-bold">Frosti</a> 主题
     </p>
-  </nav>
+  </aside>
 </footer>

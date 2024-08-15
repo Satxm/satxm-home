@@ -13,7 +13,6 @@ export const USER_AVATAR = "/imgs/profile.jpg";
 
 // Server and transition settings
 export const SERVER_URL = "https://www.satxm.top";
-export const TRANSITION_API = true;
 export const WALIINE_URL = "https://waline.satxm.top"
 
 // Some informative text on the site
@@ -24,7 +23,6 @@ export const infoText = {
   tagPage: "标签 - ",
   noCategory: "None",
   categoryCard: "分类",
-  categoriesPage: "分类",
   categoryPage: "分类 - ",
   link: "链接：",
   prevPage: "上一页",
@@ -40,10 +38,10 @@ export const menuItems = [
     { id: "日常", text: "日常随笔", href: "/日常", svg: "heart", target: "_self", },
   ], },
   { id: "项目", text: "项目", href: "/project", svg: "project", target: "_self", },
-  { id: "友链", text: "友链", href: "/friend", svg: "friend", target: "_self" },
-  { id: "关于", text: "关于", href: "/about", svg: "about", target: "_self" },
-  { id: "留言", text: "留言", href: "https://github.com/Satxm/satxm-home/issues", target: "_blank", svg: "contact", },
-  { id: "RSS", text: "RSS", href: "/rss.xml", target: "_blank", svg: "bookmark", },
+  { id: "友链", text: "友链", href: "/friend", svg: "friend", target: "_self", },
+  { id: "关于", text: "关于", href: "/about", svg: "about", target: "_self", },
+  { id: "留言", text: "留言", href: "https://github.com/Satxm/satxm-home/issues", svg: "contact", target: "_blank", },
+  { id: "RSS", text: "RSS", href: "/rss.xml", svg: "bookmark", target: "_blank", },
 ];
 
 // Social media and contact icons

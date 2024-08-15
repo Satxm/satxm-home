@@ -82,7 +82,7 @@ ul {
 
 li::marker,
 .toc-number {
-  color: oklch(var(--a));
+  color: oklch(var(--p));
 }
 thead {
   color: oklch(var(--s));
@@ -168,7 +168,7 @@ tr:last-child td {
 }
 
 thead th {
-  border-bottom: 3px solid oklch(var(--bc) / 0.25);
+  border-bottom: 1px solid oklch(var(--bc) / 0.25);
 }
 
 

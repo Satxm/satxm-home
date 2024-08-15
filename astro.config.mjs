@@ -1,16 +1,16 @@
 import { defineConfig } from 'astro/config';
-import cloudflare from '@astrojs/cloudflare';
+import icon from 'astro-icon';
 import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-import tailwind from "@astrojs/tailwind";
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
 import pagefind from 'astro-pagefind';
-import playformCompress from "@playform/compress";
-import icon from "astro-icon";
+import playformCompress from '@playform/compress';
+import rehypeKatex from 'rehype-katex';
+import remarkMath from 'remark-math';
+import sitemap from '@astrojs/sitemap';
 import swup from '@swup/astro';
-import SwupScrollPlugin from '@swup/scroll-plugin';
 import SwupParallelPlugin from '@swup/parallel-plugin';
+import SwupScrollPlugin from '@swup/scroll-plugin';
+import tailwind from '@astrojs/tailwind';
+import terser from '@rollup/plugin-terser';
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,7 +23,12 @@ export default defineConfig({
   integrations: [mdx(), icon(), swup({
     plugins: [new SwupScrollPlugin(), new SwupParallelPlugin()],
     containers: ["#swup"]
-  }), sitemap(), tailwind(), playformCompress(), pagefind()],
+  }),
+  terser({
+    compress: true,
+    mangle: true,
+  }),
+  sitemap(), tailwind(), pagefind(), playformCompress()],
   markdown: {
     shikiConfig: {
       themes: {
@@ -107,8 +112,6 @@ export default defineConfig({
       ],
     },
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
-    output: 'server',
-    adapter: cloudflare()
+    rehypePlugins: [rehypeKatex]
   },
 });
