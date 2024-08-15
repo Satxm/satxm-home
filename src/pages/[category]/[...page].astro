@@ -1,10 +1,10 @@
 ---
-import type { Post, Page } from "../../../types";
-import EnvelopeCard from "../../../components/EnvelopeCard.astro";
-import BaseLayout from "../../../layouts/BaseLayout.astro";
-import BaseCard from "../../../components/BaseCard.astro";
+import type { Post, Page } from "../../types";
+import EnvelopeCard from "../../components/EnvelopeCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseCard from "../../components/BaseCard.astro";
 import { getCollection } from "astro:content";
-import { infoText } from "../../../consts";
+import { infoText } from "../../consts";
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
   const all_posts = await getCollection("blog");
@@ -119,8 +119,8 @@ const pageLinks = generatePageLinks(totalPages);
                           aria-label={hidden}
                           href={
                             hidden === "1"
-                              ? `/categories/${params.category}`
-                              : `/categories/${params.category}/${hidden}`
+                              ? `/${params.category}`
+                              : `/${params.category}/${hidden}`
                           }
                           class={`menu-item bg-base-100 ${hidden === page.current ? "btn-active" : ""}`}
                         >
@@ -136,8 +136,8 @@ const pageLinks = generatePageLinks(totalPages);
                   aria-label={link}
                   href={
                     link === "1"
-                      ? `/categories/${params.category}`
-                      : `/categories/${params.category}/${link}`
+                      ? `/${params.category}`
+                      : `/${params.category}/${link}`
                   }
                   class={`join-item btn bg-base-100 ${link === page.current ? "btn-active" : ""}`}
                 >
@@ -153,8 +153,8 @@ const pageLinks = generatePageLinks(totalPages);
               aria-label={link}
               href={
                 link === "1"
-                  ? `/categories/${params.category}`
-                  : `/categories/${params.category}/${link}`
+                  ? `/${params.category}`
+                  : `/${params.category}/${link}`
               }
               class={`join-item btn bg-base-100 ${link === page.current ? "btn-active" : ""}`}
             >

@@ -14,6 +14,7 @@ export const USER_AVATAR = "/imgs/profile.jpg";
 // Server and transition settings
 export const SERVER_URL = "https://www.satxm.top";
 export const TRANSITION_API = true;
+export const WALIINE_URL = "https://waline.satxm.top"
 
 // Some informative text on the site
 export const infoText = {
@@ -33,75 +34,25 @@ export const infoText = {
 // Menu items for navigation
 export const menuItems = [
   { id: "主页", text: "主页", href: "/", svg: "home", target: "_self" },
-  {
-    id: "文章",
-    text: "文章",
-    href: "/posts",
-    svg: "blog",
-    target: "_self",
-    subItems: [
-      {
-        id: "文章",
-        text: "所有文章",
-        href: "/posts",
-        svg: "post",
-        target: "_self",
-      },
-      {
-        id: "技术",
-        text: "技术文章",
-        href: "/categories/技术",
-        svg: "cube",
-        target: "_self",
-      },
-      {
-        id: "日常",
-        text: "日常随笔",
-        href: "/categories/日常",
-        svg: "heart",
-        target: "_self",
-      },
-    ],
-  },
+  { id: "文章", text: "文章", href: "/posts", svg: "blog", target: "_self", subItems: [
+    { id: "文章", text: "所有文章", href: "/posts", svg: "post", target: "_self", }, 
+    { id: "技术", text: "技术文章", href: "/技术", svg: "cube", target: "_self", }, 
+    { id: "日常", text: "日常随笔", href: "/日常", svg: "heart", target: "_self", },
+  ], },
   { id: "项目", text: "项目", href: "/project", svg: "project", target: "_self", },
-  { id: "友链", text: "友链", href: "/friend", svg: "friend", target: "_self",},
+  { id: "友链", text: "友链", href: "/friend", svg: "friend", target: "_self" },
   { id: "关于", text: "关于", href: "/about", svg: "about", target: "_self" },
   { id: "留言", text: "留言", href: "https://github.com/Satxm/satxm-home/issues", target: "_blank", svg: "contact", },
-  { id: "RSS", text: "RSS", href: "/rss.xml", target: "_blank", svg: "bookmark",},
+  { id: "RSS", text: "RSS", href: "/rss.xml", target: "_blank", svg: "bookmark", },
 ];
 
 // Social media and contact icons
 export const socialIcons = [
-  {
-    href: "https://github.com/Satxm",
-    ariaLabel: "Github",
-    title: "Github",
-    svg: "github",
-  },
-  {
-    href: "https://gitee.com/satxm",
-    ariaLabel: "Gitee",
-    title: "Gitee",
-    svg: "gitee",
-  },
-  {
-    href: "https://space.bilibili.com/350697357",
-    ariaLabel: "BiliBili",
-    title: "BiliBili",
-    svg: "bilibili",
-  },
-  {
-    href: "https://modrinth.com/user/satxm",
-    ariaLabel: "Modrinth",
-    title: "Modrinth",
-    svg: "modrinth",
-  },
-  {
-    href: "https://steamcommunity.com/id/sat911/",
-    ariaLabel: "Steam",
-    title: "Steam",
-    svg: "steam",
-  },
+  { href: "https://github.com/Satxm", ariaLabel: "Github", title: "Github", svg: "github", },
+  { href: "https://gitee.com/satxm", ariaLabel: "Gitee", title: "Gitee", svg: "gitee", },
+  { href: "https://space.bilibili.com/350697357", ariaLabel: "BiliBili", title: "BiliBili", svg: "bilibili", },
+  { href: "https://modrinth.com/user/satxm", ariaLabel: "Modrinth", title: "Modrinth", svg: "modrinth", },
+  { href: "https://steamcommunity.com/id/sat911/", ariaLabel: "Steam", title: "Steam", svg: "steam", },
 ];
 
 // Category Information
