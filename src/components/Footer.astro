@@ -1,5 +1,5 @@
 ---
-import { USER_NAME, SERVER_URL } from "../consts";
+import { USER_NAME, SERVER_URL, ICP_INFO} from "../consts";
 ---
 
 <footer data-pagefind-ignore
@@ -21,6 +21,9 @@ import { USER_NAME, SERVER_URL } from "../consts";
     </svg>
     <p>
       © {new Date().getFullYear()} <a href={SERVER_URL} target="_blank" class="font-bold">{USER_NAME}</a> 版权所有
+      {ICP_INFO && (
+        <a href="https://beian.miit.gov.cn/" target="_blank">{ICP_INFO}</a>
+      )}
     </p>
   </aside>
   <aside class="grid-flow-col items-center" style="margin-left: auto;">

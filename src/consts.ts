@@ -12,8 +12,9 @@ export const USER_NAME = "Satxm";
 export const USER_AVATAR = "/imgs/profile.jpg";
 
 // Server and transition settings
-export const SERVER_URL = "https://www.satxm.top";
-export const WALIINE_URL = "https://waline.satxm.top"
+export const SERVER_URL = "https://www.sat911.top";
+export const WALIINE_URL = "https://waline.sat911.top"
+export const ICP_INFO = "陕ICP备19013534号"
 
 // Some informative text on the site
 export const infoText = {
@@ -33,14 +34,13 @@ export const infoText = {
 export const menuItems = [
   { id: "主页", text: "主页", href: "/", svg: "home", target: "_self" },
   { id: "文章", text: "文章", href: "/posts", svg: "blog", target: "_self", subItems: [
-    { id: "文章", text: "所有文章", href: "/posts", svg: "post", target: "_self", }, 
-    { id: "技术", text: "技术文章", href: "/技术", svg: "cube", target: "_self", }, 
+    { id: "文章", text: "所有文章", href: "/posts", svg: "post", target: "_self", },
+    { id: "技术", text: "技术文章", href: "/技术", svg: "cube", target: "_self", },
     { id: "日常", text: "日常随笔", href: "/日常", svg: "heart", target: "_self", },
   ], },
   { id: "项目", text: "项目", href: "/project", svg: "project", target: "_self", },
   { id: "友链", text: "友链", href: "/friend", svg: "friend", target: "_self", },
   { id: "关于", text: "关于", href: "/about", svg: "about", target: "_self", },
-  { id: "留言", text: "留言", href: "https://github.com/Satxm/satxm-home/issues", svg: "contact", target: "_blank", },
   { id: "RSS", text: "RSS", href: "/rss.xml", svg: "bookmark", target: "_blank", },
 ];
 

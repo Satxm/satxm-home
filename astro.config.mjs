@@ -14,7 +14,7 @@ import terser from '@rollup/plugin-terser';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.satxm.top',
+  site: 'https://www.sat911.top',
   style: {
     scss: {
       includePaths: ['./src/styles']
