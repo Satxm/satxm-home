@@ -20,15 +20,21 @@ export default defineConfig({
       includePaths: ['./src/styles']
     }
   },
-  integrations: [mdx(), icon(), swup({
-    plugins: [new SwupScrollPlugin(), new SwupParallelPlugin()],
-    containers: ["#swup"]
-  }),
-  terser({
-    compress: true,
-    mangle: true,
-  }),
-  sitemap(), tailwind(), pagefind(), playformCompress()],
+  integrations: [
+    mdx(),
+    icon(),
+    swup({
+      plugins: [new SwupScrollPlugin(), new SwupParallelPlugin()],
+      containers: ["#swup"]
+    }),
+    terser({
+      compress: true,
+      mangle: true,
+    }),
+    sitemap(),
+    tailwind(),
+    pagefind(),
+    playformCompress()],
   markdown: {
     shikiConfig: {
       themes: {
